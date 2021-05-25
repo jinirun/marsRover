@@ -1,15 +1,6 @@
 const {
   finalPosition
-} = require("../marsRoverChallenge/finalPosition");
-const {
-  createPlateau
-} = require("../marsRoverChallenge/createPlateau");
-const{
-  createRover
-} = require("../marsRoverChallenge/createRover");
-const {
-  checkInstructions
-} = require ("../marsRoverChallenge/checkInstructions");
+} = require("../marsRoverChallenge/positioning");
 
 describe("finalPosition", () => {
   test("If L is received, the Rover should turn 90 degrees to left and return the resulting direction", () => {
