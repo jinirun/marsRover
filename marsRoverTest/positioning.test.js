@@ -26,5 +26,7 @@ describe("finalPosition", () => {
   test("Returns the final position of the Rover when a series of instructions is passed", () => {
     expect(finalPosition({plateauCoordinates : [5,5], xCoordinate : 3, yCoordinate: 3, direction: 'E'}, 'MMRMMRMRRM',1, 2)).toBe('5 1 E');
     expect(finalPosition({plateauCoordinates : [5,5], xCoordinate : 1, yCoordinate: 2, direction: 'N'}, 'LMLMLMLMM', 3, 3)).toBe('1 3 N');
+    expect(finalPosition({plateauCoordinates : [5,5], xCoordinate : 2, yCoordinate: 2, direction: 'N'}, 'MMRMRMRM', 3, 3)).toBe('2 4 W');
+    expect(finalPosition({plateauCoordinates : [5,5], xCoordinate : 2, yCoordinate: 2, direction: 'N'}, 'MMLMRMRM', 3, 3)).toBe('2 5 E');
   })
 })
