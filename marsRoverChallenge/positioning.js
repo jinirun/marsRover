@@ -49,7 +49,6 @@ function move(rover, x, y){
 }
 
 function finalPosition(rover, instructions, Rx, Ry){
-  console.log(rover + " " + instructions);
   for(let dir=0; dir<instructions.length; dir++){
     switch(instructions[dir]){
       case 'L': rover.direction = turnLeft(rover.direction); break;
