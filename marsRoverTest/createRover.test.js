@@ -11,4 +11,14 @@ describe("createRover", () => {
     expect(createRover([5,5],6,5,'N')).toBe("Error: Rover co-ordinates have to be less than plateau co-ordinates");
     expect(createRover([5,5],5,6,'E')).toBe("Error: Rover co-ordinates have to be less than plateau co-ordinates");
   })
+
+  test("Returns an error message if the direction passed is empty", () => {
+    expect(createRover([5,5], 1, 2, '')).toBe("Error: Rover direction has to be 'N', 'S', 'W' or 'E'");
+  })
+  test("Returns an error message if the direction passed is not a valid character", () => {
+    expect(createRover([5,5], 1, 2, 'M')).toBe("Error: Rover direction has to be 'N', 'S', 'W' or 'E'");
+  })
+  test("Returns an error message if the direction passed is a number", () => {
+    expect(createRover([5,5], 1, 2, 5)).toBe("Error: Rover direction cannot be a number");
+  })
 })

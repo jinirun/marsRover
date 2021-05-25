@@ -11,6 +11,12 @@ function createRover(plateau, x, y, direction){
     return "Error: Rover co-ordinates have to be less than plateau co-ordinates";
   }
 
+  if(hasNumber.test(direction)){
+    return "Error: Rover direction cannot be a number";
+  }
+  if(!validDirections.includes(direction)){
+    return "Error: Rover direction has to be 'N', 'S', 'W' or 'E'";
+  }
   return rover;
 }
 
