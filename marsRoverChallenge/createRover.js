@@ -1,19 +1,9 @@
 //function to create rovers
 function createRover(plateau, x, y, direction){
-  console.log("in rover " + plateau + " " + x + " " + y + " " + direction);
   let rover = {plateauCoordinates : plateau, xCoordinate : x, yCoordinate: y, direction: direction};
   let hasNumber = /\d/;
   let validDirections    = ['N', 'S', 'W', 'E'];
 
-  if(plateau[0] === 0 || plateau[1] === 0){
-    return "Error: Plateau co-ordinate cannot be zero";
-  }
-  if(plateau[0] < 0 || plateau[1] < 0){
-    return "Error: Plateau co-ordinate cannot be negative";
-  }
-  if(isNaN(plateau[0]) || isNaN(plateau[1])){
-    return "Error: Plateau co-ordinates cannot contain characters";
-  }
 
   if(isNaN(x) || isNaN(y)){
     return "Error: Rover co-ordinates cannot contain characters";
