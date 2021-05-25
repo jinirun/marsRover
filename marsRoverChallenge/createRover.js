@@ -1,5 +1,6 @@
 //function to create rovers
 function createRover(plateau, x, y, direction){
+  console.log("in rover " + plateau + " " + x + " " + y + " " + direction);
   let rover = {plateauCoordinates : plateau, xCoordinate : x, yCoordinate: y, direction: direction};
   let hasNumber = /\d/;
   let validDirections    = ['N', 'S', 'W', 'E'];
@@ -30,6 +31,7 @@ function createRover(plateau, x, y, direction){
   if(!validDirections.includes(direction)){
     return "Error: Rover direction has to be 'N', 'S', 'W' or 'E'";
   }
+  console.log("rover= " + rover);
   return rover;
 }
 
