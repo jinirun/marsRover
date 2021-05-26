@@ -4,7 +4,6 @@ function createRover(plateau, x, y, direction){
   let hasNumber = /\d/;
   let validDirections    = ['N', 'S', 'W', 'E'];
 
-
   if(isNaN(x) || isNaN(y)){
     return "Error: Rover co-ordinates cannot contain characters";
   }
