@@ -25,7 +25,7 @@ function turnRight(direction){
 }
 
 //function to return new co-ordinates in the same direction when Rover Moves one grid
-function move(rover, x, y){
+function move(rover){
   let newX = 0, newY = 0;
   switch(rover.direction){
     case 'N': newX = rover.xCoordinate;
@@ -41,10 +41,6 @@ function move(rover, x, y){
       newY = rover.yCoordinate;
       break;
   }
-  if(newX === x && newY === y){
-    newX = rover.xCoordinate;
-    newY = rover.yCoordinate;
-  }
   return [newX, newY];
 }
 
@@ -53,7 +49,7 @@ function finalPosition(rover, instructions, Rx, Ry){
     switch(instructions[dir]){
       case 'L': rover.direction = turnLeft(rover.direction); break;
       case 'R': rover.direction = turnRight(rover.direction); break;
-      case 'M': [rover.xCoordinate, rover.yCoordinate] = move(rover, Rx, Ry); break;
+      case 'M': [rover.xCoordinate, rover.yCoordinate] = move(rover); break;
     }
   }
   return rover.xCoordinate + " " + rover.yCoordinate + " " + rover.direction;
