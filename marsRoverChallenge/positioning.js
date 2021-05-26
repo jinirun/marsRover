@@ -56,5 +56,8 @@ function finalPosition(rover, instructions){
 }
 
 module.exports = {
-  finalPosition
+  finalPosition,
+  turnLeft,
+  turnRight,
+  move
 }

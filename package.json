@@ -4,7 +4,7 @@
   "description": "Mars Rover Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "jest checkCollision.test.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
