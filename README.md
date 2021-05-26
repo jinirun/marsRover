@@ -24,6 +24,19 @@ moving
 
 ## Tech Stack
 
+<table>
+ <tr>
+  <td>
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNot6mDntxX5pZj1frNrpbVtkNx2S1zyXHg&usqp=CAU"/>
+  </td>
+  <td>
+   <img src="https://user-images.githubusercontent.com/67764332/119673449-437ff180-be33-11eb-98b3-887632450141.png"/>
+  </td>
+ </tr>
+</table>
+
+ 
+ 
 ## My approach
 * I have used TDD approach to complete this project
 * I find TDD very interesting and helpful as it gives a starting point for development and further progression with the logic
@@ -39,9 +52,13 @@ moving
   * I initially thought of avoiding collision when I actually encountered another rover. But had difficulty reaching the final destination after skipping a move
   * So, I decided to check for possible collision initially and wait for a new set of instructions instead of going ahead and losing both rovers
  
-//Include screenshots
+## Screenshot of test data
+
+![MarsRover_TestData](https://user-images.githubusercontent.com/67764332/119681692-3286ae80-be3a-11eb-9c89-4a4d1a7447c3.jpg)
+
 
 ## Instructions to run the project
+
 Please follow the steps below on your terminal-
 
 ```bash
