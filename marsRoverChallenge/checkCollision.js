@@ -1,5 +1,7 @@
 const{
-  positioning
+  turnRight,
+  turnLeft,
+  move
 } = require ("../marsRoverChallenge/positioning");
 
 //function to check for collision
