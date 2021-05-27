@@ -56,7 +56,9 @@ I chose Java Script as it has been a new learning for me through Tech Returners
 ## Screenshot of test data
 
 ![MarsRover_TestData](https://user-images.githubusercontent.com/67764332/119681692-3286ae80-be3a-11eb-9c89-4a4d1a7447c3.jpg)
-
+Key:
+I- Instructions; N- North; S- South; E- East; W- West;
+L- Left; R- Right; M- Move
 
 ## Instructions to run the project
 
