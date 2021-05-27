@@ -4,7 +4,6 @@ const {
 
 describe("finalPosition", () => {
   test("If L is received, the Rover should turn 90 degrees to left and return the resulting direction", () => {
-    //expect(finalPosition(createRover([createPlateau(5, 5)], 1, 2, 'N'),checkInstructions('L'),3,3)).toBe('1 2 W');
     expect(finalPosition({plateauCoordinates : [5,5], xCoordinate : 1, yCoordinate: 2, direction: 'N'}, 'L')).toBe('1 2 W');
     expect(finalPosition({plateauCoordinates : [5,5], xCoordinate : 1, yCoordinate: 2, direction: 'W'}, 'L')).toBe('1 2 S');
     expect(finalPosition({plateauCoordinates : [5,5], xCoordinate : 1, yCoordinate: 2, direction: 'S'}, 'L')).toBe('1 2 E');
