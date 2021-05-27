@@ -3,13 +3,16 @@ function createPlateau(x, y){
   let plateau = [x,y];
   //check if plateau co-ordinates are valid
   if(x === 0 || y === 0){
-    return "Error: Co-ordinate cannot be zero";
+    //return "Error: Co-ordinate cannot be zero";
+    throw new Error("Error: Co-ordinate cannot be zero");
   }
   if(x < 0 || y < 0){
-    return "Error: Co-ordinate cannot be negative";
+    //return "Error: Co-ordinate cannot be negative";
+    throw new Error("Error: Co-ordinate cannot be negative");
   }
   if(isNaN(x) || isNaN(y) || x === null || y === null){
-    return "Error: Plateau co-ordinates cannot contain characters";
+    //return "Error: Plateau co-ordinates cannot contain characters";
+    throw new Error("Error: Plateau co-ordinates cannot contain characters");
   }
   return plateau;
 }
