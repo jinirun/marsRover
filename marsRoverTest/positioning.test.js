@@ -2,6 +2,7 @@ const {
   finalPosition
 } = require("../marsRoverChallenge/positioning");
 
+//We assume all input is validated and tested for errors in earlier functions
 describe("finalPosition", () => {
   test("If L is received, the Rover should turn 90 degrees to left and return the resulting direction", () => {
     expect(finalPosition({plateauCoordinates : [5,5], xCoordinate : 1, yCoordinate: 2, direction: 'N'}, 'L')).toBe('1 2 W');
