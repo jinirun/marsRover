@@ -50,7 +50,7 @@ I chose Java Script as it has been a new learning for me through Tech Returners
 * A way to deal with more than 2 rovers
   * This is a feature which could be included to improvise the current project
 * What is the best way to avoid a collision between rovers -
-  * I initially thought of avoiding collision when I actually encountered another rover. But had difficulty reaching the final destination after skipping a move
+  * I initially thought of avoiding collision when a rover encountered another rover when actually moving. But had difficulty reaching the final destination after skipping a move
   * So, I decided to check for possible collision initially and wait for a new set of instructions instead of going ahead and losing both rovers
  
 ## Screenshot of test data
