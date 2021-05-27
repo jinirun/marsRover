@@ -76,7 +76,8 @@ npm install
 npm test
 ```
 ## My learnings and Conclusion
-I thoroughly enjoyed working on this challenge. It made me think of various scenarios to be considered while building a logic
+I thoroughly enjoyed working on this challenge. It made me think of various scenarios to be considered while building a logic.
+
 Following are my learnings -
 * Used JSON objects and used deep copy method to compare them
 * Used Regular expressions in Java Script
