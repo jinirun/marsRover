@@ -23,6 +23,7 @@ moving
 * There might be a possibility of collision, which is being assessed when we receive the instructions
 
 ## Tech Stack
+I chose Java Script as it has been a new learning for me through Tech Returners
 
 <table>
  <tr>
