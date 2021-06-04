@@ -14,6 +14,7 @@ describe("finalPosition", () => {
         "L"
       )
     ).toBe("1 2 W");
+
     expect(
       finalPosition(
         {
@@ -25,6 +26,7 @@ describe("finalPosition", () => {
         "L"
       )
     ).toBe("1 2 S");
+
     expect(
       finalPosition(
         {
@@ -36,6 +38,7 @@ describe("finalPosition", () => {
         "L"
       )
     ).toBe("1 2 E");
+
     expect(
       finalPosition(
         {
@@ -61,6 +64,7 @@ describe("finalPosition", () => {
         "R"
       )
     ).toBe("1 2 E");
+
     expect(
       finalPosition(
         {
@@ -72,6 +76,7 @@ describe("finalPosition", () => {
         "R"
       )
     ).toBe("1 2 N");
+
     expect(
       finalPosition(
         {
@@ -83,6 +88,7 @@ describe("finalPosition", () => {
         "R"
       )
     ).toBe("1 2 W");
+
     expect(
       finalPosition(
         {
@@ -108,6 +114,7 @@ describe("finalPosition", () => {
         "M"
       )
     ).toBe("1 3 N");
+
     expect(
       finalPosition(
         {
@@ -119,6 +126,7 @@ describe("finalPosition", () => {
         "M"
       )
     ).toBe("4 2 E");
+
     expect(
       finalPosition(
         {
@@ -131,6 +139,7 @@ describe("finalPosition", () => {
       )
     ).toBe("1 1 S");
   });
+
   test("Returns the final position of the Rover when a series of instructions is passed", () => {
     expect(
       finalPosition(
@@ -143,6 +152,7 @@ describe("finalPosition", () => {
         "MMRMMRMRRM"
       )
     ).toBe("5 1 E");
+
     expect(
       finalPosition(
         {
@@ -154,6 +164,7 @@ describe("finalPosition", () => {
         "LMLMLMLMM"
       )
     ).toBe("1 3 N");
+
     expect(
       finalPosition(
         {
@@ -165,6 +176,7 @@ describe("finalPosition", () => {
         "MMRMRMRM"
       )
     ).toBe("2 3 W");
+    
     expect(
       finalPosition(
         {

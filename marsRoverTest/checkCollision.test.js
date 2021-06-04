@@ -16,6 +16,7 @@ describe("checkCollision", () => {
       );
     }).toThrow("Error: Possible collision at co-ordinates 3 3");
   });
+  
   test("Returns an empty string when there is no possible collision", () => {
     expect(
       checkCollision(
