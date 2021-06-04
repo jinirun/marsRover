@@ -1,11 +1,14 @@
 const { checkCollision } = require("../marsRoverChallenge/checkCollision");
+const { createPlateau } = require("../marsRoverChallenge/plateau");
+
+const plateau = [5,5];
 
 describe("checkCollision", () => {
   test("Returns an error message when a possible collision is detected", () => {
     expect(() => {
       checkCollision(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 2,
           yCoordinate: 2,
           direction: "N",
@@ -21,7 +24,7 @@ describe("checkCollision", () => {
     expect(
       checkCollision(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "N",
