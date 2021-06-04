@@ -1,37 +1,24 @@
 const { createRover } = require("../marsRoverChallenge/createRover");
 
 describe("createRover", () => {
-  test("Returns an error if a character or string is passed as the rover dimension", () => {
+  test.each([[[5, 5], "g", 5, "N"], [[5, 5], 5, "h", "E"]])
+    ("Returns an error if a character or string is passed as the rover dimension", ([a,b], c, d, e) => {
     expect(() => {
-      createRover([5, 5], "g", 5, "N");
-    }).toThrow("Error: Rover co-ordinates cannot contain characters");
-    
-    expect(() => {
-      createRover([5, 5], 5, "h", "E");
+      createRover(([a,b], c, d, e));
     }).toThrow("Error: Rover co-ordinates cannot contain characters");
   });
 
-  test("Returns an error if co-ordinates are greater than the plateau dimensions", () => {
+  test.each([[[5, 5], 6, 5, "N"], [[5, 5], 5, 6, "E"]])
+    ("Returns an error if co-ordinates are greater than the plateau dimensions", ([a,b], c, d, e) => {
     expect(() => {
-      createRover([5, 5], 6, 5, "N");
-    }).toThrow(
-      "Error: Rover co-ordinates have to be less than plateau co-ordinates"
-    );
-
-    expect(() => {
-      createRover([5, 5], 5, 6, "E");
-    }).toThrow(
-      "Error: Rover co-ordinates have to be less than plateau co-ordinates"
-    );
+      createRover([a,b], c, d, e);
+    }).toThrow("Error: Rover co-ordinates have to be less than plateau co-ordinates");
   });
 
-  test("Returns an error if co-ordinates are negative", () => {
+  test.each([[[5, 5], -6, 5, "N"], [[5, 5], 5, -6, "E"]])
+    ("Returns an error if co-ordinates are negative", ([a, b], c, d, e) => {
     expect(() => {
-      createRover([5, 5], -6, 5, "N");
-    }).toThrow("Error: Rover co-ordinates cannot be negative");
-
-    expect(() => {
-      createRover([5, 5], 5, -6, "E");
+      createRover([a, b], c, d, e);
     }).toThrow("Error: Rover co-ordinates cannot be negative");
   });
 
