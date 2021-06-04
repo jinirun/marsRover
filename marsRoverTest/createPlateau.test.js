@@ -2,45 +2,24 @@ const { createPlateau } = require("../marsRoverChallenge/createPlateau");
 
 //implemented tests to log errors (expect-toThrow)
 describe("createPlateau", () => {
-  test("Returns an error if 0 is passed as the co-ordinate", () => {
+  test.each([[0,5], [4,0], [0,0]])
+    ("Should return an error for inputs %i %i",(a, b) => {
     expect(() => {
-      createPlateau(0, 5);
+      createPlateau(a, b);
     }).toThrow("Error: Co-ordinate cannot be zero");
+  }); 
 
+  test.each([[-1, 4], [6, -3], [-6, -3]])
+    ("Returns an error if negative numbers are entered as plateau co-ordinates", (a, b) => {
     expect(() => {
-      createPlateau(4, 0);
-    }).toThrow("Error: Co-ordinate cannot be zero");
-
-    expect(() => {
-      createPlateau(0, 0);
-    }).toThrow("Error: Co-ordinate cannot be zero");
-  });
-
-  test("Returns an error if negative numbers are entered as plateau co-ordinates", () => {
-    expect(() => {
-      createPlateau(-1, 4);
-    }).toThrow("Error: Co-ordinate cannot be negative");
-
-    expect(() => {
-      createPlateau(6, -3);
-    }).toThrow("Error: Co-ordinate cannot be negative");
-
-    expect(() => {
-      createPlateau(-6, -3);
+      createPlateau(a, b);
     }).toThrow("Error: Co-ordinate cannot be negative");
   });
 
-  test("Returns an error if characters are passed as plateau co-ordinates", () => {
+  test.each([["y", 5], [9, "l"], ["y", "t"]])
+    ("Returns an error if characters are passed as plateau co-ordinates", (a, b) => {
     expect(() => {
-      createPlateau("y", 5);
-    }).toThrow("Error: Plateau co-ordinates cannot contain characters");
-
-    expect(() => {
-      createPlateau(9, "l");
-    }).toThrow("Error: Plateau co-ordinates cannot contain characters");
-    
-    expect(() => {
-      createPlateau("y", "t");
+      createPlateau(a, b);
     }).toThrow("Error: Plateau co-ordinates cannot contain characters");
   });
 
