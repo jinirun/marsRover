@@ -1,4 +1,4 @@
-const { createPlateau } = require("../marsRoverChallenge/createPlateau");
+const { createPlateau } = require("../marsRoverChallenge/plateau");
 
 //implemented tests to log errors (expect-toThrow)
 describe("createPlateau", () => {

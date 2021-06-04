@@ -1,4 +1,4 @@
-const { createRover } = require("../marsRoverChallenge/createRover");
+const { createRover } = require("../marsRoverChallenge/rover");
 
 describe("createRover", () => {
   test.each([[[5, 5], "g", 5, "N"], [[5, 5], 5, "h", "E"]])
