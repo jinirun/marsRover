@@ -1,8 +1,7 @@
 const { createRover, checkCollision }   = require("../marsRoverChallenge/rover");
 const { createPlateau } = require("../marsRoverChallenge/plateau");
-const { turnLeft, turnRight, move } = require("../marsRoverChallenge/positioning");
 
-const plateau = [5,5];
+const plateau = createPlateau(5,5);
 
 describe("createRover", () => {
   test.each([[plateau, "g", 5, "N"], [[5, 5], 5, "h", "E"]])

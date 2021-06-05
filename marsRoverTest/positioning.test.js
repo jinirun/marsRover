@@ -1,4 +1,7 @@
 const { finalPosition } = require("../marsRoverChallenge/positioning");
+const { createPlateau } = require("../marsRoverChallenge/plateau");
+
+const plateau = createPlateau(5,5);
 
 //We assume all input is validated and tested for errors in earlier functions
 describe("finalPosition", () => {
@@ -6,7 +9,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "N",
@@ -18,7 +21,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "W",
@@ -30,7 +33,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "S",
@@ -42,7 +45,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "E",
@@ -56,7 +59,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "N",
@@ -80,7 +83,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "S",
@@ -92,7 +95,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "E",
@@ -106,7 +109,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "N",
@@ -118,7 +121,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 3,
           yCoordinate: 2,
           direction: "E",
@@ -130,7 +133,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "S",
@@ -144,7 +147,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 3,
           yCoordinate: 3,
           direction: "E",
@@ -156,7 +159,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 1,
           yCoordinate: 2,
           direction: "N",
@@ -168,7 +171,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 2,
           yCoordinate: 2,
           direction: "N",
@@ -180,7 +183,7 @@ describe("finalPosition", () => {
     expect(
       finalPosition(
         {
-          plateauCoordinates: [5, 5],
+          plateauCoordinates: plateau,
           xCoordinate: 2,
           yCoordinate: 2,
           direction: "N",
