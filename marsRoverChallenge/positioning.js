@@ -3,30 +3,35 @@
 //function to return the direction when the Rover turns Left
 function turnLeft(direction){
   let newDirection = "";
+
   switch(direction){
     case 'N': newDirection = 'W'; break;
     case 'W': newDirection = 'S'; break;
     case 'S': newDirection = 'E'; break;
     case 'E': newDirection = 'N'; break;
   }
+  
   return newDirection;
 }
 
 //function to return the direction when Rover turns Right
 function turnRight(direction){
   let newDirection = "";
+
   switch(direction){
     case 'N': newDirection = 'E'; break;
     case 'E': newDirection = 'S'; break;
     case 'S': newDirection = 'W'; break;
     case 'W': newDirection = 'N'; break;
   }
+
   return newDirection;
 }
 
 //function to return new co-ordinates in the same direction when Rover Moves one grid
 function move(rover){
   let newX = 0, newY = 0;
+
   switch(rover.direction){
     case 'N': newX = rover.xCoordinate;
       newY = (rover.yCoordinate+1 > rover.plateauCoordinates[1]) ? rover.yCoordinate : rover.yCoordinate+1;
@@ -41,6 +46,7 @@ function move(rover){
       newY = rover.yCoordinate;
       break;
   }
+
   return [newX, newY];
 }
 
@@ -52,6 +58,7 @@ function finalPosition(rover, instructions){
       case 'M': [rover.xCoordinate, rover.yCoordinate] = move(rover); break;
     }
   }
+
   return rover.xCoordinate + " " + rover.yCoordinate + " " + rover.direction;
 }
 
