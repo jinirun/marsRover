@@ -8,13 +8,17 @@ function checkInstructions(instructions) {
   if (instructions === "") {
     throw new Error("Error: Instruction cannot be empty");
   }
+
   if (hasNumber.test(instructions)) {
     throw new Error("Error: Instruction cannot contain a number");
   }
+
   if (format.test(instructions)) {
     throw new Error("Error: Instruction cannot contain special characters");
   }
+
   str = instructions.split("");
+
   for (let i = 0; i < str.length; i++) {
     if (!validInstructions.includes(str[i])) {
       throw new Error(
@@ -22,6 +26,7 @@ function checkInstructions(instructions) {
       );
     }
   }
+  
   return instructions;
 }
 
